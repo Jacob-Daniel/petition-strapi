@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_place_geo_locations",
+  "info": {
+    "displayName": "Geo Location",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "longitude": {
+      "type": "float"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "what3words": {
+      "type": "string"
+    }
+  }
+}

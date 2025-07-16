@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_layout_featureds",
+  "info": {
+    "displayName": "Featured"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "bg_colour": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "number_to_display": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

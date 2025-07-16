@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_image_versions",
+  "info": {
+    "displayName": "Image Versions",
+    "description": "Dynamic image versions with custom types"
+  },
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "version": {
+      "type": "enumeration",
+      "enum": [
+        "mobile",
+        "desktop"
+      ],
+      "required": true
+    }
+  }
+}

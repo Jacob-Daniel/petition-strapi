@@ -1,0 +1,37 @@
+{
+  "collectionName": "targets",
+  "info": {
+    "singularName": "target",
+    "pluralName": "targets",
+    "displayName": "Target"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["local_council", "MP", "mayor", "school", "charity", "business", "police", "health_service", "custom"]
+    },
+    "local": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::local.local"
+    },
+    "petitions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::petition.petition"
+    },
+    "contactEmail": {
+      "type": "email"
+    },
+    "contactUrl": {
+      "type": "string"
+    }
+  }
+}

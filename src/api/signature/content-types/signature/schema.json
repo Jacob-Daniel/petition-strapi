@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "signatures",
+  "info": {
+    "singularName": "signature",
+    "pluralName": "signatures",
+    "displayName": "Signature"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "private": true
+    },
+    "comment": {
+      "type": "text"
+    },
+    "anonymize": {
+      "type": "boolean",
+      "default": false
+    },
+    "petition": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::petition.petition",
+      "inversedBy": "signatures"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "last_name": {
+      "type": "string"
+    }
+  }
+}

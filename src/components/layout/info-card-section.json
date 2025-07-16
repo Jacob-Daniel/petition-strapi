@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_info_card_sections",
+  "info": {
+    "displayName": "Info Card Section"
+  },
+  "options": {},
+  "attributes": {
+    "info_card": {
+      "type": "component",
+      "component": "layout.info-cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

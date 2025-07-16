@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_layout_mixed_content_tab_fields",
+  "info": {
+    "displayName": "Mixed Content Tab Fields",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "type": "blocks"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "article",
+        "video",
+        "image"
+      ],
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "videos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.video"
+    }
+  }
+}

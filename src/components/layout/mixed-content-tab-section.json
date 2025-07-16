@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_layout_mixed_content_tab_sections",
+  "info": {
+    "displayName": "Mixed Content Tab Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.mixed-content-tabs"
+    },
+    "bg_colour": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_layout_comment_sections",
+  "info": {
+    "displayName": "Comment Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

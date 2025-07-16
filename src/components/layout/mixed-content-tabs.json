@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_layout_mixed_content_tabs",
+  "info": {
+    "displayName": "Mixed Content Tabs"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "tab_content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.mixed-content-tab-fields"
+    }
+  }
+}

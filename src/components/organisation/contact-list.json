@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_organisation_contact_lists",
+  "info": {
+    "displayName": "Contact List"
+  },
+  "options": {},
+  "attributes": {
+    "contact": {
+      "type": "component",
+      "repeatable": true,
+      "component": "organisation.contact"
+    }
+  }
+}

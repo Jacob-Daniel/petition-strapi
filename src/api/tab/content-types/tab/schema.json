@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tabs",
+  "info": {
+    "singularName": "tab",
+    "pluralName": "tabs",
+    "displayName": "Tabs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tabs": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.info-tabs",
+        "content.gallery"
+      ]
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

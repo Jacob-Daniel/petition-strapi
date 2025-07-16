@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_layout_organisation_sections",
+  "info": {
+    "displayName": "Organisation Section"
+  },
+  "options": {},
+  "attributes": {
+    "organisation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "organisation.organisation"
+    }
+  }
+}

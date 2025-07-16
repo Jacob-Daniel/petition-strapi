@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navigations",
+  "info": {
+    "singularName": "navigation",
+    "pluralName": "navigations",
+    "displayName": "Navigation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "main",
+        "footer"
+      ]
+    },
+    "navigation_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::navigation-item.navigation-item",
+      "mappedBy": "navigation"
+    }
+  }
+}

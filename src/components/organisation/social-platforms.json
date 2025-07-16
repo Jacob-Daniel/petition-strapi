@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_organisation_social_platforms",
+  "info": {
+    "displayName": "Social Platforms"
+  },
+  "options": {},
+  "attributes": {
+    "social": {
+      "type": "component",
+      "repeatable": true,
+      "component": "organisation.social-media"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_places_sections",
+  "info": {
+    "displayName": "Places Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "bg_colour": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "places": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.place"
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_layout_navigations",
+  "info": {
+    "displayName": "Navigation"
+  },
+  "options": {},
+  "attributes": {
+    "navigation_menu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::navigation.navigation"
+    }
+  }
+}

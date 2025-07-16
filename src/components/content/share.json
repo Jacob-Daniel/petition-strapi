@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_content_shares",
+  "info": {
+    "displayName": "share"
+  },
+  "options": {},
+  "attributes": {
+    "message": {
+      "type": "string"
+    }
+  }
+}

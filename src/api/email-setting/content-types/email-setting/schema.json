@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "email_settings",
+  "info": {
+    "singularName": "email-setting",
+    "pluralName": "email-settings",
+    "displayName": "Email Settings",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SMTP_HOST": {
+      "type": "string"
+    },
+    "SMTP_PORT": {
+      "type": "string"
+    },
+    "SMTP_USER": {
+      "type": "string"
+    },
+    "SMTP_PASS": {
+      "type": "string"
+    },
+    "SMTP_SECURITY_TYPE": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "SSL",
+        "TLS"
+      ]
+    },
+    "email_sender_name": {
+      "type": "string"
+    },
+    "email_subject": {
+      "type": "string"
+    },
+    "email_body": {
+      "type": "blocks"
+    },
+    "email_footer": {
+      "type": "blocks"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "together",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "author": {
+    "name": "Jacob Daniel",
+    "url": "https://jacobdaniel.co.uk"
+  },
+  "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+  },
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^6.0.2",
+    "@sklinet/strapi-plugin-video-field": "^1.1.1",
+    "@strapi/design-system": "^1.19.0",
+    "@strapi/helper-plugin": "^4.25.12",
+    "@strapi/icons": "^1.19.0",
+    "@strapi/plugin-color-picker": "^5.17.0",
+    "@strapi/plugin-seo": "^2.0.8",
+    "@strapi/plugin-users-permissions": "5.11.2",
+    "@strapi/provider-email-nodemailer": "^5.17.0",
+    "@strapi/strapi": "5.17.0",
+    "@strapi/utils": "^5.17.0",
+    "dayjs": "^1.11.13",
+    "nodemailer": "^6.10.1",
+    "pg": "8.8.0",
+    "prettier": "^3.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1",
+    "sharp": "^0.33.5",
+    "strapi-plugin-file-system": "^1.0.10",
+    "strapi-plugin-webp-converter": "^1.0.4",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.4",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "39ee4ef1-c53d-4666-9348-7a48185f945a",
+    "installId": "666f58ba5f41dbda3b4f0929ff7a3cc354a4d7ffac907ebfc0d82373e93537e9"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "core-js-pure",
+      "esbuild",
+      "sharp"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_content_petition_stats",
+  "info": {
+    "displayName": "Petition Stats"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "sub_heading": {
+      "type": "string"
+    },
+    "show_time_left": {
+      "type": "boolean"
+    },
+    "show_progress_bar": {
+      "type": "boolean"
+    },
+    "show_signature_count": {
+      "type": "boolean"
+    },
+    "show_target_count": {
+      "type": "boolean"
+    },
+    "bg_colour": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaLink": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "memberships",
+  "info": {
+    "singularName": "membership",
+    "pluralName": "memberships",
+    "displayName": "membership",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "mailing_list": {
+      "type": "boolean"
+    }
+  }
+}

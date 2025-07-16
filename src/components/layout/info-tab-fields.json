@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_layout_info_tab_fields",
+  "info": {
+    "displayName": "Info Tab Fields"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "customField",
+      "options": {
+        "icon": "text"
+      },
+      "customField": "plugin::react-icons-picker.react-icons-picker"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

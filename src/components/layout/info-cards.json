@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_info_cards",
+  "info": {
+    "displayName": "Info Cards"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "customField",
+      "customField": "plugin::react-icons-picker.react-icons-picker",
+      "options": {
+        "icon": "text"
+      }
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_organisation_organisations",
+  "info": {
+    "displayName": "Organisation"
+  },
+  "options": {},
+  "attributes": {
+    "organisation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::organisation.organisation"
+    }
+  }
+}

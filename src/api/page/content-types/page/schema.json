@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Pages",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "content.gallery",
+        "content.content",
+        "layout.organisation-section",
+        "form.form-section",
+        "layout.calendar",
+        "layout.places-section",
+        "layout.mixed-content-tab-section",
+        "layout.info-tab-section",
+        "layout.featured",
+        "layout.comment-section",
+        "layout.petition-section",
+        "organisation.social-platforms",
+        "layout.featured-events-section",
+        "layout.info-cards",
+        "layout.info-card-section"
+      ]
+    },
+    "sidebar": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.sidebar",
+        "layout.event-sidebar",
+        "elements.button",
+        "content.share",
+        "layout.stats-section",
+        "layout.social-platforms",
+        "form.form-section",
+        "content.petition-stats"
+      ]
+    },
+    "seoTitle": {
+      "type": "string",
+      "required": false
+    },
+    "seoDescription": {
+      "type": "text",
+      "required": false
+    },
+    "ogTitle": {
+      "type": "string",
+      "required": false
+    },
+    "ogDescription": {
+      "type": "text",
+      "required": false
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "twitterTitle": {
+      "type": "string",
+      "required": false
+    },
+    "twitterDescription": {
+      "type": "text",
+      "required": false
+    },
+    "twitterImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "banner": {
+      "type": "component",
+      "component": "layout.banner",
+      "repeatable": false
+    }
+  }
+}

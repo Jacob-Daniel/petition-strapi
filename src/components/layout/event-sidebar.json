@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_layout_event_sidebars",
+  "info": {
+    "displayName": "Event Sidebar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "share": {
+      "displayName": "share",
+      "type": "component",
+      "repeatable": false,
+      "component": "content.share"
+    }
+  }
+}

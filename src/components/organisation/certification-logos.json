@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_organisation_certification_logos",
+  "info": {
+    "displayName": "Certification Logos",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "label": {
+      "type": "string",
+      "unique": false
+    }
+  }
+}

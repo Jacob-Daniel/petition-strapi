@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_layout_social_platforms",
+  "info": {
+    "displayName": "Social Platforms"
+  },
+  "options": {},
+  "attributes": {
+    "organisation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::organisation.organisation"
+    },
+    "heading": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_place_featured_events_sections",
+  "info": {
+    "displayName": "Featured Events Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "number_to_display": {
+      "type": "integer"
+    },
+    "bg_colour": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "content": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

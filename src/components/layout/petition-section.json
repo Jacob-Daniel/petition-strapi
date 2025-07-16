@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_petition_sections",
+  "info": {
+    "displayName": "Petition Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "Button": {
+      "type": "component",
+      "component": "elements.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

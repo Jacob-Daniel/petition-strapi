@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_layout_info_tab_sections",
+  "info": {
+    "displayName": "Info Tab Section"
+  },
+  "options": {},
+  "attributes": {
+    "bg_colour": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "icon_colour": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.info-tabs"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_form_form_sections",
+  "info": {
+    "displayName": "Form Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "bg_colour": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "form_field": {
+      "type": "component",
+      "repeatable": true,
+      "component": "form.form-field"
+    },
+    "mailing_list": {
+      "type": "boolean"
+    }
+  }
+}

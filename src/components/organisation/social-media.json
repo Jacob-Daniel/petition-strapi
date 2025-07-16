@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_organisation_social_medias",
+  "info": {
+    "displayName": "Social",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "default": "MeanwhileGdnsOfficial"
+    },
+    "platform": {
+      "type": "string",
+      "default": "Facebook"
+    },
+    "handle": {
+      "type": "string",
+      "default": "MeanwhileGdnsOfficial"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "icon": {
+      "type": "customField",
+      "options": {
+        "icon": "string"
+      },
+      "customField": "plugin::react-icons-picker.react-icons-picker"
+    }
+  }
+}

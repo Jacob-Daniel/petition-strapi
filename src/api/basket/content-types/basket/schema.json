@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "baskets",
+  "info": {
+    "singularName": "basket",
+    "pluralName": "baskets",
+    "displayName": "Basket",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "details": {
+      "type": "json"
+    },
+    "sessionId": {
+      "type": "string"
+    },
+    "basketState": {
+      "type": "enumeration",
+      "default": "active",
+      "enum": [
+        "active",
+        "booking",
+        "paid",
+        "archived"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "baskets"
+    }
+  }
+}

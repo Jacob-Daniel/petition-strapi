@@ -1,0 +1,33 @@
+{
+  "collectionName": "locals",
+  "info": {
+    "singularName": "local",
+    "pluralName": "locals",
+    "displayName": "Local"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "geoData": {
+      "type": "json"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "petitions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::petition.petition"
+    }
+  }
+}
