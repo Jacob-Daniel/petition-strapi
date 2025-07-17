@@ -49,7 +49,9 @@
         "layout.stats-section",
         "layout.social-platforms",
         "form.form-section",
-        "content.petition-stats"
+        "content.petition-stats",
+        "layout.navigation",
+        "content.heading"
       ]
     },
     "seoTitle": {

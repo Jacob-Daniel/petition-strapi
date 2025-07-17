@@ -8,15 +8,18 @@
     "image": {
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "version": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "mobile",
         "desktop"
-      ],
-      "required": true
+      ]
     }
   }
 }

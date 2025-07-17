@@ -7,6 +7,7 @@ export interface ContentContent extends Struct.ComponentSchema {
     displayName: 'Content';
   };
   attributes: {
+    anchor: Schema.Attribute.String;
     content: Schema.Attribute.Blocks;
   };
 }
@@ -18,10 +19,7 @@ export interface ContentGallery extends Struct.ComponentSchema {
     displayName: 'Gallery';
   };
   attributes: {
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    images: Schema.Attribute.Media<'images' | 'files'>;
   };
 }
 
@@ -42,7 +40,7 @@ export interface ContentImageVersions extends Struct.ComponentSchema {
     displayName: 'Image Versions';
   };
   attributes: {
-    image: Schema.Attribute.Media & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'>;
     version: Schema.Attribute.Enumeration<['mobile', 'desktop']> &
       Schema.Attribute.Required;
   };
@@ -406,6 +404,7 @@ export interface LayoutSidebar extends Struct.ComponentSchema {
   attributes: {
     form: Schema.Attribute.Component<'form.form-section', false>;
     heading: Schema.Attribute.String;
+    navigation: Schema.Attribute.Component<'layout.navigation', false>;
   };
 }
 

@@ -13,6 +13,11 @@
       "type": "component",
       "component": "form.form-section",
       "repeatable": false
+    },
+    "navigation": {
+      "type": "component",
+      "component": "layout.navigation",
+      "repeatable": false
     }
   }
 }

@@ -8,6 +8,9 @@
   "attributes": {
     "content": {
       "type": "blocks"
+    },
+    "anchor": {
+      "type": "string"
     }
   }
 }

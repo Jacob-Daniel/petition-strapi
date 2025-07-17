@@ -617,6 +617,7 @@ export interface ApiNavigationItemNavigationItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    fragment: Schema.Attribute.String;
     is_parent: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     label: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -670,7 +671,7 @@ export interface ApiNavigationNavigation extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<['main', 'footer']>;
+    type: Schema.Attribute.Enumeration<['main', 'footer', 'sidebar']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -778,6 +779,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.social-platforms',
         'form.form-section',
         'content.petition-stats',
+        'layout.navigation',
+        'content.heading',
       ]
     >;
     slug: Schema.Attribute.UID<'title'>;
@@ -811,7 +814,7 @@ export interface ApiPetitionPetition extends Struct.CollectionTypeSchema {
     >;
     demand: Schema.Attribute.Blocks;
     end_date: Schema.Attribute.Date;
-    image: Schema.Attribute.Media;
+    image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

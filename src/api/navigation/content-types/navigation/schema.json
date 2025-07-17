@@ -9,6 +9,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string"
@@ -17,7 +18,8 @@
       "type": "enumeration",
       "enum": [
         "main",
-        "footer"
+        "footer",
+        "sidebar"
       ]
     },
     "navigation_items": {
