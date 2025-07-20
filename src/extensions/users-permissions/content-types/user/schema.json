@@ -71,6 +71,15 @@
       "relation": "oneToMany",
       "target": "api::basket.basket",
       "mappedBy": "user"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
     }
   }
 }

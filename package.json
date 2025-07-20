@@ -24,13 +24,14 @@
     "@strapi/design-system": "^1.19.0",
     "@strapi/helper-plugin": "^4.25.12",
     "@strapi/icons": "^1.19.0",
-    "@strapi/plugin-color-picker": "^5.17.0",
+    "@strapi/plugin-color-picker": "^5.18.1",
     "@strapi/plugin-seo": "^2.0.8",
     "@strapi/plugin-users-permissions": "5.11.2",
-    "@strapi/provider-email-nodemailer": "^5.17.0",
+    "@strapi/provider-email-nodemailer": "^5.18.1",
     "@strapi/strapi": "5.17.0",
-    "@strapi/utils": "^5.17.0",
+    "@strapi/utils": "^5.18.1",
     "dayjs": "^1.11.13",
+    "handlebars": "^4.7.8",
     "nodemailer": "^6.10.1",
     "pg": "8.8.0",
     "prettier": "^3.6.2",
@@ -40,10 +41,11 @@
     "sharp": "^0.33.5",
     "strapi-plugin-file-system": "^1.0.10",
     "strapi-plugin-webp-converter": "^1.0.4",
-    "styled-components": "^6.1.19"
+    "styled-components": "^6.1.19",
+    "wkhtmltopdf": "^0.4.0"
   },
   "devDependencies": {
-    "@types/node": "^20.19.4",
+    "@types/node": "^20.19.9",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
     "prettier": "^3.5.3",
@@ -63,7 +65,8 @@
       "@swc/core",
       "core-js-pure",
       "esbuild",
-      "sharp"
+      "sharp",
+      "puppeteer"
     ]
   }
 }

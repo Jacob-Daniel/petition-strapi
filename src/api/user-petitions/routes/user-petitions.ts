@@ -2,8 +2,14 @@ const featuredEvents = {
 	routes: [
 		{
 			method: "GET",
-			path: "/myPetitions",
+			path: "/user-petitions",
 			handler: "user-petitions.getUserPetitions",
+			config: { auth: {} },
+		},
+		{
+			method: "GET",
+			path: "/user-petitions/:documentId/generate-pdf",
+			handler: "user-petitions.generatePetitionPdf",
 			config: { auth: {} },
 		},
 	],

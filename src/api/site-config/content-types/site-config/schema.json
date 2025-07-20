@@ -36,6 +36,9 @@
       "type": "component",
       "component": "organisation.social-platforms",
       "repeatable": false
+    },
+    "tagline": {
+      "type": "string"
     }
   }
 }

@@ -12,11 +12,18 @@
   "pluginOptions": {},
   "attributes": {
     "first_name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "email": {
       "type": "email",
-      "private": true
+      "private": true,
+      "required": true
+    },
+    "postcode": {
+      "type": "string",
+      "private": true,
+      "required": true
     },
     "comment": {
       "type": "text"
@@ -29,7 +36,8 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::petition.petition",
-      "inversedBy": "signatures"
+      "inversedBy": "signatures",
+      "required": true
     },
     "user": {
       "type": "relation",

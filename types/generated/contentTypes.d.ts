@@ -618,6 +618,7 @@ export interface ApiNavigationItemNavigationItem
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     fragment: Schema.Attribute.String;
+    is_button: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     is_parent: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     label: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -905,8 +906,10 @@ export interface ApiSignatureSignature extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    email: Schema.Attribute.Email & Schema.Attribute.Private;
-    first_name: Schema.Attribute.String;
+    email: Schema.Attribute.Email &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    first_name: Schema.Attribute.String & Schema.Attribute.Required;
     last_name: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -914,7 +917,11 @@ export interface ApiSignatureSignature extends Struct.CollectionTypeSchema {
       'api::signature.signature'
     > &
       Schema.Attribute.Private;
-    petition: Schema.Attribute.Relation<'manyToOne', 'api::petition.petition'>;
+    petition: Schema.Attribute.Relation<'manyToOne', 'api::petition.petition'> &
+      Schema.Attribute.Required;
+    postcode: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -954,6 +961,7 @@ export interface ApiSiteConfigSiteConfig extends Struct.SingleTypeSchema {
       'organisation.social-platforms',
       false
     >;
+    tagline: Schema.Attribute.String;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1532,17 +1540,20 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    last_name: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::users-permissions.user'
     > &
       Schema.Attribute.Private;
+    mobile: Schema.Attribute.String;
     password: Schema.Attribute.Password &
       Schema.Attribute.Private &
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    postcode: Schema.Attribute.String;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;

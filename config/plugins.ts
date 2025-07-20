@@ -39,7 +39,7 @@ export default ({
 			enabled: true,
 			config: {
 				register: {
-					allowedFields: ["mobile"],
+					allowedFields: ["mobile","postcode","last_name"],
 				},
 			},
 		},

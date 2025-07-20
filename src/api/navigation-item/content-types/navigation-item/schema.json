@@ -57,6 +57,10 @@
     },
     "fragment": {
       "type": "string"
+    },
+    "is_button": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

@@ -199,7 +199,6 @@ export interface LayoutFeatured extends Struct.ComponentSchema {
   attributes: {
     bg_colour: Schema.Attribute.String &
       Schema.Attribute.CustomField<'plugin::color-picker.color'>;
-    content: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
     number_to_display: Schema.Attribute.Integer;
   };
@@ -213,7 +212,6 @@ export interface LayoutFeaturedEventsSection extends Struct.ComponentSchema {
   attributes: {
     bg_colour: Schema.Attribute.String &
       Schema.Attribute.CustomField<'plugin::color-picker.color'>;
-    content: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
     number_to_display: Schema.Attribute.Integer;
   };

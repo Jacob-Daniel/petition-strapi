@@ -11,9 +11,6 @@
     "number_to_display": {
       "type": "integer"
     },
-    "content": {
-      "type": "blocks"
-    },
     "bg_colour": {
       "type": "customField",
       "customField": "plugin::color-picker.color",
