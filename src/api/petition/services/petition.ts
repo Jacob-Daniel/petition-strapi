@@ -24,7 +24,7 @@ export default factories.createCoreService(
     ),
     'created_by', json_build_object(
       'username', creator.username,
-      'email', creator.email
+      'email', creator.email,
       'last_name', creator.last_name
     )
   ) AS petition,
@@ -78,10 +78,11 @@ LIMIT 1;
 
 				// Prepare template data
 				const templateData = {
-					created_by:petition.created_by.username+' '+petition.created_by.last_name,
-					created_by_email:petition.created_by.email,
-					created_at:new Date(petition.created_at).toISOString().split('T')[0],
-					target:petition.target.name,
+					created_by:
+						petition.created_by.username + " " + petition.created_by.last_name,
+					created_by_email: petition.created_by.email,
+					created_at: new Date(petition.created_at).toISOString().split("T")[0],
+					target: petition.target.name,
 					title: petition.title,
 					demand: renderRichText(petition.demand),
 					reason: renderRichText(petition.reason),

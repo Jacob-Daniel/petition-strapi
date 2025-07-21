@@ -21,12 +21,11 @@ export default factories.createCoreController("api::signature.signature", {
 				});
 			}
 
-			const response = await strapi.entityService.create(
-				"api::signature.signature",
-				{
+			const response = await strapi
+				.documents("api::signature.signature")
+				.create({
 					data: ctx.request.body.data,
-				},
-			);
+				});
 
 			ctx.send(response);
 		} catch (error) {
