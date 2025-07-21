@@ -1,4 +1,4 @@
-const featuredEvents = {
+const userPetitions = {
 	routes: [
 		{
 			method: "GET",
@@ -14,4 +14,4 @@ const featuredEvents = {
 		},
 	],
 };
-export default featuredEvents;
+export default userPetitions;

@@ -1,6 +1,6 @@
 "use strict";
 import fs from "fs";
-
+import path from "path";
 import { Core } from "@strapi/strapi";
 
 const getUserPetitions: Core.Controller["get"] = async (ctx) => {
