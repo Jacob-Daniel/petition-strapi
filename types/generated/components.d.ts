@@ -93,6 +93,17 @@ export interface ElementsButton extends Struct.ComponentSchema {
     displayName: 'button';
   };
   attributes: {
+    ariaLabel: Schema.Attribute.String;
+    bg_colour: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
+    hash: Schema.Attribute.String;
+    icon: Schema.Attribute.String &
+      Schema.Attribute.CustomField<
+        'plugin::react-icons-picker.react-icons-picker',
+        {
+          icon: 'text';
+        }
+      >;
     label: Schema.Attribute.String;
     target: Schema.Attribute.String;
   };

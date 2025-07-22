@@ -10,6 +10,24 @@
     },
     "target": {
       "type": "string"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "customField",
+      "customField": "plugin::react-icons-picker.react-icons-picker",
+      "options": {
+        "icon": "text"
+      }
+    },
+    "bg_colour": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "ariaLabel": {
+      "type": "string"
     }
   },
   "config": {}

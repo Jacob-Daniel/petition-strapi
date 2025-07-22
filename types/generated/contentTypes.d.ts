@@ -766,6 +766,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.featured-events-section',
         'layout.info-cards',
         'layout.info-card-section',
+        'elements.button',
       ]
     >;
     seoDescription: Schema.Attribute.Text;

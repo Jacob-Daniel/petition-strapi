@@ -15,6 +15,11 @@
     "title": {
       "type": "string"
     },
+    "banner": {
+      "type": "component",
+      "component": "layout.banner",
+      "repeatable": false
+    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -36,7 +41,8 @@
         "organisation.social-platforms",
         "layout.featured-events-section",
         "layout.info-cards",
-        "layout.info-card-section"
+        "layout.info-card-section",
+        "elements.button"
       ]
     },
     "sidebar": {
@@ -87,11 +93,6 @@
       "type": "media",
       "multiple": false,
       "required": false
-    },
-    "banner": {
-      "type": "component",
-      "component": "layout.banner",
-      "repeatable": false
     }
   }
 }
