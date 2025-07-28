@@ -42,7 +42,8 @@
         "layout.featured-events-section",
         "layout.info-cards",
         "layout.info-card-section",
-        "elements.button"
+        "elements.button",
+        "content.heading"
       ]
     },
     "sidebar": {

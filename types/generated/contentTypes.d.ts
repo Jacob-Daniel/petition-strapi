@@ -672,7 +672,7 @@ export interface ApiNavigationNavigation extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<['main', 'footer', 'sidebar']>;
+    type: Schema.Attribute.Enumeration<['main', 'footer', 'sidebar', 'user']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -767,6 +767,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.info-cards',
         'layout.info-card-section',
         'elements.button',
+        'content.heading',
       ]
     >;
     seoDescription: Schema.Attribute.Text;

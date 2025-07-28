@@ -3,10 +3,11 @@
 import { Core } from "@strapi/strapi";
 
 const getFeatured: Core.Controller["get"] = async (ctx) => {
+	const tagSlug = ctx.query.tagSlug || null;
 	try {
 		const petitions = await strapi
 			.service("api::featured-petitions.featured-petitions")
-			.getFeaturedEvents();
+			.getFeaturedEvents({ tagSlug });
 
 		ctx.body = petitions;
 	} catch (err) {

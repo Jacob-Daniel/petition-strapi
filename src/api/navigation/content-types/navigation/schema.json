@@ -19,7 +19,8 @@
       "enum": [
         "main",
         "footer",
-        "sidebar"
+        "sidebar",
+        "user"
       ]
     },
     "navigation_items": {
