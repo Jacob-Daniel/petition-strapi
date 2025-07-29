@@ -68,15 +68,18 @@
     },
     "signatures": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::signature.signature",
-      "mappedBy": "petition"
+      "mappedBy": "petitions"
     },
     "reason": {
       "type": "blocks"
     },
     "ward": {
       "type": "string"
+    },
+    "last_signature": {
+      "type": "datetime"
     }
   }
 }

@@ -6,31 +6,64 @@ import { factories } from "@strapi/strapi";
 export default factories.createCoreController("api::signature.signature", {
 	async create(ctx) {
 		try {
-			const { email } = ctx.request.body.data;
+			const { email, petition } = ctx.request.body.data;
+			const petitionDocumentId = petition?.connect?.documentId;
 
-			const existingMember = await strapi.db
+			if (!petitionDocumentId) {
+				return ctx.badRequest("Petition documentId is required");
+			}
+
+			const petitionEntry = await strapi.db
+				.query("api::petition.petition")
+				.findOne({
+					where: { documentId: petitionDocumentId },
+					select: ["id"],
+				});
+
+			if (!petitionEntry) {
+				return ctx.badRequest("Petition not found");
+			}
+
+			const petitionId = petitionEntry.id;
+
+			const existingSignature = await strapi.db
 				.query("api::signature.signature")
 				.findOne({
-					where: { email, publishedAt: { $notNull: true } },
+					where: {
+						email,
+						petitions: {
+							id: petitionId,
+						},
+						publishedAt: { $notNull: true },
+					},
+					populate: ["petitions"],
 				});
 
-			if (existingMember) {
-				throw new ApplicationError("signature Email already exists", {
-					field: "email",
-					code: "duplicate",
-				});
+			if (existingSignature) {
+				throw new ApplicationError(
+					"Signature email already exists for this petition",
+					{
+						field: "email",
+						code: "duplicate",
+					},
+				);
 			}
 
 			const response = await strapi
 				.documents("api::signature.signature")
 				.create({
-					data: ctx.request.body.data,
+					data: {
+						...ctx.request.body.data,
+						petitions: {
+							connect: [{ id: petitionId }],
+						},
+					},
 				});
 
 			ctx.send(response);
 		} catch (error) {
 			if (error instanceof ApplicationError) {
-				ctx.status = 400; // Bad Request
+				ctx.status = 400;
 				ctx.send({
 					error: {
 						status: ctx.status,
@@ -41,7 +74,7 @@ export default factories.createCoreController("api::signature.signature", {
 				});
 			} else {
 				strapi.log.error("Error in create controller:", error);
-				ctx.status = 500; // Internal Server Error
+				ctx.status = 500;
 				ctx.send({
 					error: {
 						status: 500,
@@ -52,26 +85,7 @@ export default factories.createCoreController("api::signature.signature", {
 			}
 		}
 	},
-	async afterCreate(event) {
-		console.log("start after created");
-		try {
-			const { result } = event;
-			const signature = await strapi.entityService.findOne(
-				"api::signature.signature",
-				result.id,
-			);
-			if (!signature || !signature.email) {
-				strapi.log.warn("signature created but missing details or user info.");
-				return;
-			}
-			const { email } = signature;
-			const details = signature;
-			await sendSignatureConfirmation(email, signature);
-			strapi.log.info(`signature confirmation sent to ${email}`);
-		} catch (error) {
-			strapi.log.error("Error sending confirmation email:", error);
-		}
-	},
+
 	async sendConfirmationEmail(ctx) {
 		try {
 			const { orderDocumentId } = ctx.request.body;

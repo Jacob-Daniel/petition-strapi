@@ -32,12 +32,11 @@
       "type": "boolean",
       "default": false
     },
-    "petition": {
+    "petitions": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::petition.petition",
-      "inversedBy": "signatures",
-      "required": true
+      "inversedBy": "signatures"
     },
     "user": {
       "type": "relation",

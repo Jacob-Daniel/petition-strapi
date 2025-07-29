@@ -818,6 +818,7 @@ export interface ApiPetitionPetition extends Struct.CollectionTypeSchema {
     demand: Schema.Attribute.Blocks;
     end_date: Schema.Attribute.Date;
     image: Schema.Attribute.Media<'images'>;
+    last_signature: Schema.Attribute.DateTime;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -827,7 +828,7 @@ export interface ApiPetitionPetition extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     reason: Schema.Attribute.Blocks;
     signatures: Schema.Attribute.Relation<
-      'oneToMany',
+      'manyToMany',
       'api::signature.signature'
     >;
     signaturesCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
@@ -919,8 +920,10 @@ export interface ApiSignatureSignature extends Struct.CollectionTypeSchema {
       'api::signature.signature'
     > &
       Schema.Attribute.Private;
-    petition: Schema.Attribute.Relation<'manyToOne', 'api::petition.petition'> &
-      Schema.Attribute.Required;
+    petitions: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::petition.petition'
+    >;
     postcode: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Private;
